@@ -1,2 +1,2 @@
-# BancoDeDados-PROA
-Atividades de banco de dados.
+# Atividades-PROA
+Atividades do PROA.
