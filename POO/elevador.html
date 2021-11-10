@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Elevador</title>
+</head>
+
+<body>
+    <div id="corpo"></div>
+    <script type="text/javascript">
+        //         Crie uma classe denominada Elevador para armazenar as informações de um elevador dentro de um prédio. A classe deve armazenar o andar atual (térreo = 0), total de andares no prédio, capacidade do elevador e quantas pessoas estão presentes nele. A classe deve também disponibilizar os seguintes métodos:	
+        class Elevador {
+            constructor(andarAtual=0, totalAndares=12, capacidadeMaxima=8, pessoasDentro=0) {
+                this.andarAtual = andarAtual;
+                this.totalAndares = totalAndares;
+                this.capacidadeMaxima = capacidadeMaxima;
+                this.pessoasDentro = pessoasDentro;
+            }
+                        
+            entrar(x) {
+                // - Entra: para acrescentar uma pessoa no elevador (só deve acrescentar se ainda houver espaço);
+                if (pessoasDentro < capacidadeMaxima) {
+                    pessoasDentro +=1;
+                    console.log('Este Elevador possui' + this.pessoasDentro);
+                } else{
+                    console.log('Elevador lotado, por favor espere o próximo.');
+                }
+            }
+            sair(x) {
+                // - Sai: para remover uma pessoa do elevador (só deve remover se houver alguém dentro dele);
+                if (pessoasDentro > 0) {
+                    pessoasDentro -= 1;
+                    console.log('Este Elevador possui' + pessoasDentro);
+                } else{
+                    console.log('Este elevador não possue ninguém');
+                }
+            }
+            subir(x) {
+                // - Sobe: para subir um andar (não deve subir se já estiver no último andar);
+                if (andarAtual < totalAndares) {
+                    andarAtual += 1;
+                    console.log('Este Elevador está no andar' + andarAtual);
+                } else{
+                    console.log('Elevado no último andar, não é possível subir.');
+                }
+            }
+            descer(x) {
+                // - Desce: para descer um andar (não deve descer se já estiver no térreo);
+                if (andarAtual > 0) {
+                    andarAtual -= 1;
+                    console.log('Este Elevador está no andar' + andarAtual);
+                } else{
+                    console.log('Elevador no térreo, não é possível descer.');
+                }
+            }
+        }
+        var elevador = new Elevador();
+    </script>
+</body>
+
+</html>
