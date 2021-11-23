@@ -1,2 +1,2 @@
 # Atividades-PROA
-Atividades do PROA.
+Atividades do PROA
